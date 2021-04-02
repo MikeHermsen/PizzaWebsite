@@ -1,0 +1,58 @@
+CREATE TABLE IF NOT EXISTS pizza_hut_products (
+    id INT AUTO_INCREMENT,
+    p_name VARCHAR(255) NOT NULL,
+    p_price FLOAT(4),
+    p_stock INT(4),
+    description TEXT,
+    img_url VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Margherita', 9.99, 100, 'Tomato sauce, mozzarella, and oregano', 'pizza-margherita.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Marinara', 9, 100, 'Tomato sauce, garlic and basil', 'pizza-marinara.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Quattro', 6.25, 100, 'Tomato sauce, mozzarella, mushrooms, ham, artichokes, olives, and oregano', 'pizza-quattro-stagioni.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Carbonara', 6.25, 100, 'Tomato sauce, mozzarella, parmesan, eggs, and bacon', 'pizza-carbonara.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Frutti', 9.99, 100, 'Tomato sauce and seafood', 'pizza-frutti-di-mare.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Quattro', 5.50, 100, 'Tomato sauce, mozzarella, parmesan, gorgonzola cheese, artichokes, and oregano', 'quattro-formaggi-pizza.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Crudo', 8, 100, 'Tomato sauce, mozzarella and Parma ham', 'pizza-crudo.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Napoletana', 6.20, 100, 'Tomato sauce, mozzarella, oregano, anchovies', 'pizza-napoletana.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Pugliese', 7.50, 100, 'Tomato sauce, mozzarella, oregano, and onions', 'pizza-pugliese.jpg');
+
+
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Coffee', 2.50, 100, 'Programmer feul', 'drink-coffee.jpeg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Iced tea', 3, 100, 'Icy thea', 'drink-iced-tea.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Hot chocolate', 4, 100, 'Hot chocolate.', 'hot-chocolate.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Beer', 1.99, 100, 'Need to relax?', 'drink-beer.jpeg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Soda', 2, 100, 'Cold soda', 'drink-soda.jpg');
+
+INSERT INTO pizza_hut_products(p_name, p_price, p_stock, description, img_url)
+VALUES('Smoothie', 6, 100, 'Need to cool down?', 'drink-smoothie.jpg');

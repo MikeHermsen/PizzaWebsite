@@ -1,0 +1,271 @@
+:root
+{ /*- Variables -*/
+
+    /* Colors                                         */
+    --brand-fg         : #d62828; /* Maximum Red    */
+    --brand-bg         : #eae2b7; /* Lemon Meringue */
+    --brand-color      : #FCBF49; /* Orange         */
+    --brand-color-dark : #003049; /* Prussian Blue  */
+
+    /*- The page white space between the content and the edges -*/
+    --page-width       : 70%;
+    --page-white-space : 15%;
+    /*! 100 - page-width = --page-white-space !*/
+}
+
+/*- Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*
+{ /*- ALL OBJECTS -*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--brand-bg);
+}
+
+/* ^ SETTINGS FOR CSS ^ */
+
+/* HEADER CSS START */
+
+header 
+{
+    overflow: hidden;
+    background-color: var(--brand-color-dark);
+    width: 70%;
+    padding: 0 15%;
+    height: 60px;
+    position: fixed;
+}
+
+header h1 
+{
+    position: fixed;
+    color: var(--brand-bg);
+    padding: 15px;
+}
+
+nav 
+{
+    width: 250px;
+    font-size: 20px;
+    margin: 20px;
+    float: right;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+nav a
+{
+    color: var(--brand-bg);
+}
+
+nav a:hover
+{
+    color: aliceblue;    
+    text-decoration: underline;
+}
+
+.active-nav-link 
+{
+    text-decoration: underline;
+}
+
+/* ^ HEADER CSS END ^ */
+
+/* CONTAINER DEFAULT START */
+
+.page-container
+{
+    width: var(--page-width);
+    height: 100vh;
+    padding-left: var(--page-white-space);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.banner 
+{
+    
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    overflow: hidden;
+
+    background-image: url('https://image.freepik.com/free-photo/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ^ CONATAINER DEFAULT CSS END ^ */
+
+/* CUSTOM CONTAINERS CSS START */
+.banner .home
+{
+    color: var(--brand-bg);
+    padding: 20vh 50vw;
+}
+
+.banner .order
+{
+    color: var(--brand-bg);
+    padding: 20vh 16vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* ^ CUSTOM CONTAINERS CSS END ^ */
+
+/* CARD CONTAINERS CSS START */
+
+.card
+{
+    overflow: hidden;
+    background-color:darkslategray;
+    height: 220px;
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.card h2, .card h5, .card  p
+{
+    padding-left: 10px;
+}
+
+.card h2
+{
+    color: white;
+}
+
+.card input 
+{
+    width: 94%;
+    text-align: center;
+}
+
+.card img
+{
+
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+}
+
+/* ^ CARD CONTAINERS CSS END ^ */
+
+/* FORM ORDER CONTAINERS CSS START */
+.banner div h1 {
+    font-size: 80px;
+}
+
+.warning {
+    color: var(--brand-fg);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: 8px;
+}
+
+.btn-order {
+    color: var(--brand-bg);
+    padding: 20px 30px;
+    float: right;
+    background-color: var(--brand-color-dark);
+    border-radius: 20px;
+    border: 2px solid var(--brand-color);
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.btn-order:hover
+{
+    transition-property: all;
+    transition-duration: 0.1s;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.541);
+}
+
+.recipe
+{
+    background-image: url('https://i.pinimg.com/originals/12/02/3b/12023b8b4d3ee9953498249162bbf3b9.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.recipe table, .recipe tr, .recipe td, .recipe th 
+{
+    text-align: left;
+    color: black;
+}
+
+.forum-container
+{
+    width: var(--page-width);
+    padding: 80px var(--page-white-space);
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.forum-container form
+{
+    width: 90%;
+    padding: 5%;
+    margin-top: 10px;
+    background-color: var(--brand-color-dark);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+i
+{
+    color: white;
+}
+
+/* ^ FORM ORDER CONTAINERS CSS END ^ */
+
+
+@media only screen and (max-width: 775px) 
+{
+    header h1 
+    {
+        display: none;
+    } 
+    
+    header nav 
+    {
+        float: unset;
+        text-align: center;
+        width: 100%;
+    }
+
+    .banner .order
+    {
+        grid-template-columns: auto auto;
+    }
+    
+    .forum-container form
+    {
+        grid-template-columns: auto;
+    }
+
+    .banner .home
+    {
+        color: var(--brand-color-dark);
+        padding: 20vh 10vw;
+        text-shadow: 1px 0 0 var(--brand-color), 0 -1px 0 var(--brand-color), 0 1px 0 var(--brand-color), -1px 0 0 var(--brand-color);
+    }
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .banner .order 
+    {
+        grid-template-columns: auto;
+
+    }
+}
